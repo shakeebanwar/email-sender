@@ -120,6 +120,12 @@ class referalTemplate(models.Model):
     content = HTMLField()
 
 
+class friendRefTemp(models.Model):
+    content = HTMLField()
+
+
+
+
 
     
 class emailReferalrecord(models.Model):

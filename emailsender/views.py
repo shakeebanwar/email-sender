@@ -689,36 +689,46 @@ class referalCompaign(APIView):
             if token:
                 fname = request.data.get('fname',False)
                 email = request.data.get('email',False)
-                link = request.data.get('link',False)
+                
                 
 
                 ###Key Validation
-                if not 'fname' in request.data or not 'email' in request.data or not 'link' in request.data:
-                    return Response({'status':False,'message':'fname,email,link keys is required'})
+                if not 'fname' in request.data or not 'email' in request.data:
+                    return Response({'status':False,'message':'fname,email keys is required'})
 
                 ##Required fields validation
-                if not fname or not email or not link:
-                    return Response({'status':False,'message':"fname,email,link field is required"})
+                if not fname or not email:
+                    return Response({'status':False,'message':"fname,email field is required"})
                         
 
                 email = checkemailforamt(email)
                 if email:
-                    # verfied.referalCompaign("Share the ❤️ Friend! Refer & EARN NOW 😊",fname,config('EMAIL_HOST_USER'),email,link)
+                    fetchcontent = friendRefTemp.objects.all().first()
+                    if fetchcontent:
+                        ##check if user is not refer
+                        already = emailReferalrecord.objects.filter(userRecieve = email)
+                        if not already:
+                            ##Create User Record
+                            referalfullname = token['fname'] + " " + token['lname']
+                            emailstatus = verfied.friendReferal("Share the ❤️ Friend! Refer & EARN NOW 😊",config('EMAIL_HOST_USER'),email,referalfullname,fname,fetchcontent.content)
+                            if emailstatus:
+                                data = emailReferalrecord(userReference = token['email'],userRecieve = email,recieverFirstname = fname,referFirstname = token['fname'],creation = datetime.datetime.now().date())
+                                data.save()
+                                return Response({'status':True,'message':'Invitation Sent Successful'})
 
-                    ##check if user is not refer
-                    already = emailReferalrecord.objects.filter(userRecieve = email)
-                    if not already:
-                        ##Create User Record
-                        data = emailReferalrecord(userReference = token['email'],userRecieve = email,recieverFirstname = fname,referFirstname = token['fname'],creation = datetime.datetime.now().date())
-                        data.save()
-
-                        verfied.referalCompaignEmailSend("Share the ❤️ Friend! Refer & EARN NOW 😊",config('EMAIL_HOST_USER'),email,3,token['fname'],fname)
-                        return Response({'status':True,'message':'Invitation Sent Successful'})
+                            else:
+                                return Response({'status':False,'message':'Something went wrong'})
 
 
+
+                        else:
+                            return Response({'status':False,'message':'You Already refer this Person'})
+
+                    
                     else:
-                        return Response({'status':False,'message':'You Already refer this Person'})
-
+                        return Response({'status':False,'message':"Email Template doesnot exist"})
+                
+                
                 else:
                     return Response({'status':False,'message':'Email Pattern is incorrect'})  
 

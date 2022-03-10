@@ -1772,3 +1772,247 @@ def referalCompaignEmailSend(subject,femail,toemail,count,referalname,clientname
     return True
 
 
+
+
+
+
+
+
+def friendReferal(subject,femail,toemail,referalname,clientname,content):
+    try:
+        html_content = f'''
+                <!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
+        style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="x-apple-disable-message-reformatting">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="telephone=no" name="format-detection">
+        <title>Refer A Friend 1</title>
+
+
+    </head>
+
+    <body
+        style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+        
+    
+        
+        <div class="es-wrapper-color" style="background-color:#F6F6F6">
+        
+            <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0"
+                style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top">
+                
+                
+
+                <tr style="border-collapse:collapse">
+                                                                <td align="left"
+                                                                        style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:30px;padding-right:30px">
+                                                                    
+                                                                    
+                                                                    {content}
+                                                                    
+                                                                    
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+
+                                                        <tr style="border-collapse:collapse">
+                                                                    <td align="left"
+                                                                        style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:30px;padding-right:30px">
+                                                                    <span
+                                                                            class="es-button-border-3 es-button-border"
+                                                                            style="border-style:solid;border-color:#2CB543;background:#007191;border-width:0px 0px 2px 0px;display:inline-block;border-radius:30px;width:auto;border-bottom-width:0px"><a
+                                                                                href="https://pycare.co/"
+                                                                                class="es-button es-button-2"
+                                                                                target="_blank"
+                                                                                style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#007191;border-width:10px 20px 10px 20px;display:inline-block;background:#007191;border-radius:30px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Book Online Now</a></span></td>
+                                                                </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr style="border-collapse:collapse">
+                                            <td align="left" bgcolor="transparent"
+                                                style="Margin:0;padding-top:20px;padding-bottom:20px;padding-left:20px;padding-right:20px;background-color:transparent">
+                                                <table cellspacing="0" cellpadding="0" width="100%"
+                                                    style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                    <tr style="border-collapse:collapse">
+                                                        <td align="left" style="padding:0;Margin:0;width:560px">
+                                                            <table width="100%" cellspacing="0" cellpadding="0"
+                                                                bgcolor="transparent"
+                                                                style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:transparent;border-radius:5px;background-image:url(https://wqtoe.stripocdn.email/content/guids/CABINET_28e8faadc51ce40383edabf0bf5c1489/images/footer_compressed_600.png);background-repeat:no-repeat;background-position:left top"
+                                                                background="https://wqtoe.stripocdn.email/content/guids/CABINET_28e8faadc51ce40383edabf0bf5c1489/images/footer_compressed_600.png"
+                                                                role="presentation">
+                                                                <tr style="border-collapse:collapse">
+                                                                    <td style="padding:0;Margin:0">
+                                                                        <table class="es-menu" width="100%" cellspacing="0"
+                                                                            cellpadding="0" role="presentation"
+                                                                            style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                                            <tr class="links-images-top"
+                                                                                style="border-collapse:collapse">
+                                                                                <!--[if !mso]><!-- -->
+                                                                                <td align="center" valign="top"
+                                                                                    width="33.33%"
+                                                                                    class="es-desk-menu-hidden es-desk-hidden"
+                                                                                    style="display:none;float:left;overflow:hidden;width:33.33% !important;max-height:0;line-height:0;mso-hide:all;Margin:0;padding-left:5px;padding-right:5px;padding-top:25px;padding-bottom:15px;border:0"
+                                                                                    bgcolor="transparent"><a target="_blank"
+                                                                                        style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#ffffff;font-size:14px"
+                                                                                        href="tel:0247096727"><img
+                                                                                            src="https://wqtoe.stripocdn.email/content/guids/CABINET_0719e868f19b059f1129de97f07e6d72/images/phone_with_sound_waves.png"
+                                                                                            alt="Call Now" title="Call Now"
+                                                                                            align="absmiddle" width="30"
+                                                                                            height="30"
+                                                                                            style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px"><br>Call
+                                                                                        Now </a></td>
+                                                                                <!--<![endif]-->
+                                                                                <!--[if !mso]><!-- -->
+                                                                                <td align="center" valign="top"
+                                                                                    width="33.33%"
+                                                                                    class="es-desk-menu-hidden es-desk-hidden"
+                                                                                    style="display:none;float:left;overflow:hidden;width:33.33% !important;max-height:0;line-height:0;mso-hide:all;Margin:0;padding-left:5px;padding-right:5px;padding-top:25px;padding-bottom:15px;border:0"
+                                                                                    bgcolor="transparent"><a target="_blank"
+                                                                                        style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#ffffff;font-size:14px"
+                                                                                        href="https://evolution.book.app/"><img
+                                                                                            src="https://wqtoe.stripocdn.email/content/guids/CABINET_0719e868f19b059f1129de97f07e6d72/images/clock_calendar_icon.png"
+                                                                                            alt="Book Now" title="Book Now"
+                                                                                            align="absmiddle" width="30"
+                                                                                            height="30"
+                                                                                            style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px"><br>Book
+                                                                                        Now </a></td>
+                                                                                <!--<![endif]-->
+                                                                                <!--[if !mso]><!-- -->
+                                                                                <td align="center" valign="top"
+                                                                                    width="33.33%"
+                                                                                    class="es-desk-menu-hidden es-desk-hidden"
+                                                                                    style="display:none;float:left;overflow:hidden;width:33.33% !important;max-height:0;line-height:0;mso-hide:all;Margin:0;padding-left:5px;padding-right:5px;padding-top:25px;padding-bottom:15px;border:0"
+                                                                                    bgcolor="transparent"><a target="_blank"
+                                                                                        style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#ffffff;font-size:14px"
+                                                                                        href="https://goo.gl/maps/L6rxReViBoTDu6dT8"><img
+                                                                                            src="https://wqtoe.stripocdn.email/content/guids/CABINET_0719e868f19b059f1129de97f07e6d72/images/car_icon.png"
+                                                                                            alt="Directions"
+                                                                                            title="Directions"
+                                                                                            align="absmiddle" width="30"
+                                                                                            height="30"
+                                                                                            style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px"><br>Directions
+                                                                                    </a></td>
+                                                                                <!--<![endif]-->
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="border-collapse:collapse">
+                                                                    <td style="padding:0;Margin:0">
+                                                                        <table class="es-menu" width="100%" cellspacing="0"
+                                                                            cellpadding="0" role="presentation"
+                                                                            style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                                            <tr class="links-images-top"
+                                                                                style="border-collapse:collapse">
+                                                                                <td align="center" valign="top"
+                                                                                    width="33.33%" class="es-mobile-hidden"
+                                                                                    style="Margin:0;padding-left:5px;padding-right:5px;padding-top:25px;padding-bottom:15px;border:0"
+                                                                                    bgcolor="transparent"><a target="_blank"
+                                                                                        style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#ffffff;font-size:14px"
+                                                                                        href="tel:0247096727"><img
+                                                                                            src="https://wqtoe.stripocdn.email/content/guids/CABINET_0719e868f19b059f1129de97f07e6d72/images/phone_with_sound_waves.png"
+                                                                                            alt="(02) 4709 6727"
+                                                                                            title="(02) 4709 6727"
+                                                                                            width="30" align="absmiddle"
+                                                                                            height="30"
+                                                                                            style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px"><br>(02)
+                                                                                        4709 6727 </a></td>
+                                                                                <td align="center" valign="top"
+                                                                                    width="33.33%" class="es-mobile-hidden"
+                                                                                    style="Margin:0;padding-left:5px;padding-right:5px;padding-top:25px;padding-bottom:15px;border:0"
+                                                                                    bgcolor="transparent"><a target="_blank"
+                                                                                        style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#ffffff;font-size:14px"
+                                                                                        href="https://evolution.book.app/"><img
+                                                                                            src="https://wqtoe.stripocdn.email/content/guids/CABINET_0719e868f19b059f1129de97f07e6d72/images/clock_calendar_icon.png"
+                                                                                            alt="Book Now" title="Book Now"
+                                                                                            width="30" align="absmiddle"
+                                                                                            height="30"
+                                                                                            style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px"><br>Book
+                                                                                        Now </a></td>
+                                                                                <td align="center" valign="top"
+                                                                                    width="33.33%" class="es-mobile-hidden"
+                                                                                    style="Margin:0;padding-left:5px;padding-right:5px;padding-top:25px;padding-bottom:15px;border:0"
+                                                                                    bgcolor="transparent"><a target="_blank"
+                                                                                        style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:none;display:block;font-family:arial, 'helvetica neue', helvetica, sans-serif;color:#ffffff;font-size:14px"
+                                                                                        href="https://goo.gl/maps/L6rxReViBoTDu6dT8"><img
+                                                                                            src="https://wqtoe.stripocdn.email/content/guids/CABINET_0719e868f19b059f1129de97f07e6d72/images/car_icon.png"
+                                                                                            alt="6/474 High Street, Penrith, NSW, 2750"
+                                                                                            title="6/474 High Street, Penrith, NSW, 2750"
+                                                                                            width="30" align="absmiddle"
+                                                                                            height="30"
+                                                                                            style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px"><br>6/474
+                                                                                        High Street, Penrith, NSW, 2750 </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr style="border-collapse:collapse">
+                                            <td align="left"
+                                                style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
+                                                <table cellpadding="0" cellspacing="0" width="100%"
+                                                    style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                                                    <tr style="border-collapse:collapse">
+                                                        <td align="center" valign="top"
+                                                            style="padding:0;Margin:0;width:560px">
+                                                            <table cellpadding="0" cellspacing="0" width="100%"
+                                                                role="presentation"
+                                                                style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+
+
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+    </html>
+            
+                    '''
+        
+
+
+        if '[friend.firstName]' in html_content and '[referrer.fullName]' in html_content:
+            
+            html_content = html_content.replace('[friend.firstName]',clientname)
+            html_content = html_content.replace('[referrer.fullName]',referalname)
+
+        else:
+            return False
+
+        msg = EmailMultiAlternatives(subject, html_content, femail, [toemail])
+        msg.attach_alternative(html_content, "text/html")
+        msg.send()
+        return True
+
+    
+
+    except Exception as e:
+        print("error",str(e))
+        False

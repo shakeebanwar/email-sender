@@ -47,6 +47,8 @@ admin.site.register(Rating,combineAdminShowRating)
 admin.site.register(landingContent)
 admin.site.register(emailReferalrecord)
 admin.site.register(referalTemplate)
+admin.site.register(friendRefTemp)
+
 
 
 
