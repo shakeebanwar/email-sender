@@ -116,7 +116,7 @@ class landingContent(models.Model):
     content = HTMLField()
 
 
-class referalCompaign(models.Model):
+class referalTemplate(models.Model):
     content = HTMLField()
 
 

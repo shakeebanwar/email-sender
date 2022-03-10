@@ -787,12 +787,17 @@ class screenshotdetail(APIView):
 class referalCompaignCron(APIView):
     def post(self,request):
         try:
-            # emailList = ["jawadsheikh224@gmail.com","test@evolutionmc.com.au","test1@evolutionmc.com.au","test2@evolutionmc.com.au","test3@evolutionmc.com.au","Shabih_haider1@outlook.com","shakeebanwar250@gmail.com","shoaibbilal101@gmail.com","mf4639@gmail.com"]
+            emailList = ["jawadsheikh224@gmail.com","test@evolutionmc.com.au","test1@evolutionmc.com.au","test2@evolutionmc.com.au","test3@evolutionmc.com.au","Shabih_haider1@outlook.com","shakeebanwar250@gmail.com","shoaibbilal101@gmail.com","mf4639@gmail.com"]
 
-            emailList = ["shakeebanwar250@gmail.com"]
+            fetchPattern = referalTemplate.objects.all().first()
+            if fetchPattern:
+               
 
-            verfied.referalCronjobTemplate("Share the ❤️ Friend! Refer & EARN NOW 😊",config('EMAIL_HOST_USER'),emailList)
-            return Response({'status':True,'message':'Email Sent Successful'})
+                verfied.referalCronjobTemplate("Share the ❤️ Friend! Refer & EARN NOW 😊",config('EMAIL_HOST_USER'),emailList,fetchPattern.content)
+                return Response({'status':True,'message':'Email Sent Successful'})
+
+            else:
+                return Response({"status":False,"message":"Email template not exist"})
 
 
         except Exception as e:

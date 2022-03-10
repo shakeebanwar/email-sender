@@ -46,7 +46,7 @@ admin.site.register(DiscountPrice)
 admin.site.register(Rating,combineAdminShowRating)
 admin.site.register(landingContent)
 admin.site.register(emailReferalrecord)
-admin.site.register(referalCompaign)
+admin.site.register(referalTemplate)
 
 
 

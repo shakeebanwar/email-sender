@@ -865,9 +865,9 @@ def screenshot(subject,femail,toemail,data):
 
 ##Referal compaign Cronjob
 
-def referalCronjobTemplate(subject,femail,toemail):
+def referalCronjobTemplate(subject,femail,toemail,templateContent):
     try:
-        html_content = '''
+        html_content = f'''
                             <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
                 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
                 <head>
@@ -900,14 +900,19 @@ def referalCronjobTemplate(subject,femail,toemail):
                 <tr style="border-collapse:collapse">
                 <td valign="top" align="center" style="padding:0;Margin:0;width:560px">
                 <table width="100%" cellspacing="0" cellpadding="0" bgcolor="transparent" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent" role="presentation">
-                <tr style="border-collapse:collapse">
-                <td align="left" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:30px;padding-right:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">New Referral Program at Evolution Medical Care!</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px"><br></p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">Hi friend, Evolution Medical Care is excited to announce to you our new Friends &amp; Family Referral Program!<br><br></p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">How it works? Click the button below &amp; share the offer with your friends via Email, Text Message, or Social Media.</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px"><br></p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">Each share is automatically tracked back to you. You could share with ten or ten thousand friends and we will know the referral came from you.<br><br>For each of your friends, who take advantage of our offer and signs up and attends for a Healthcare Assessment, you and your friend will earn a $50 credit you can each use towards the next service!</p></td>
-                </tr>
-                <tr style="border-collapse:collapse">
-                <td align="center" style="padding:0;Margin:0"><span class="es-button-border-3 es-button-border" style="border-style:solid;border-color:#2CB543;background:#007191;border-width:0px 0px 2px 0px;display:inline-block;border-radius:30px;width:auto;border-bottom-width:0px"><a href="https://pycare.co/" class="es-button es-button-2" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#007191;border-width:10px 20px 10px 20px;display:inline-block;background:#007191;border-radius:30px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Refer &amp; Earn $50 NOW</a></span></td>
-                </tr>
+               
+
+                {templateContent}
+
+
+             
                 <tr style="border-collapse:collapse">
                 <td align="left" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:30px;padding-right:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">Warm regards,<br>Evolution Medical Care Team&nbsp;😊</p></td>
+
+
+                   <tr style="border-collapse:collapse">
+                <td align="center" style="padding:0;Margin:0"><span class="es-button-border-3 es-button-border" style="border-style:solid;border-color:#2CB543;background:#007191;border-width:0px 0px 2px 0px;display:inline-block;border-radius:30px;width:auto;border-bottom-width:0px"><a href="https://pycare.co/" class="es-button es-button-2" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#007191;border-width:10px 20px 10px 20px;display:inline-block;background:#007191;border-radius:30px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Refer &amp; Earn $50 NOW</a></span></td>
+                </tr>
                 </tr>
                 </table></td>
                 </tr>
