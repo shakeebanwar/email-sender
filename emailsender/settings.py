@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['139.99.238.238','localhost','127.0.0.1']
 
 
@@ -98,7 +98,7 @@ else:
         'NAME': 'ovatu',
         'USER': 'shakeebanwar',
         'PASSWORD': 'shakeeb@python@shoaib',
-        'HOST': 'db',
+        'HOST': '139.99.238.238',
         'PORT': 5432,
     }
 }

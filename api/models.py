@@ -124,7 +124,9 @@ class friendRefTemp(models.Model):
     content = HTMLField()
 
 
-
+class smsTemplate(models.Model):
+    content = models.TextField(default="")
+    
 
 
     

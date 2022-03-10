@@ -1,8 +1,8 @@
 import requests
 import json
+from decouple import config
 
-
-def sendsms(clientFirstName,clientNumber,compaignStatus = False):
+def sendsms(clientFirstName,clientNumber,compaignStatus = False,messageContent=""):
     smsurl = "https://api.directsms.com.au/s3/rest/sms/send"
 
     if not compaignStatus:
@@ -16,36 +16,29 @@ def sendsms(clientFirstName,clientNumber,compaignStatus = False):
 
 
     else:
-        messageContent = '''Hey there,
-heads up, I’ve been attending Evolution Medical Care to get my health back on track and they have been making such a big difference!🙌I 
-
-I think that they can help you also! What’s more, they mentioned that if I sent you this invite, you will get a $50 discount off of your first session!👍
-https://pycare.co
-
-        ''' 
 
 
+        payload = json.dumps({
+                            "messageType": "2-way",
+                            "messageId": "ID112",
+                            "senderId": "0417303105",
+                            "messageText": messageContent,
+                            "to": clientNumber,
+        })
+
+        headers = {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Username': config('smsUsername'),
+                'Password': config('smsPassword')
+        }
 
 
-    payload = json.dumps({
-                        "messageType": "2-way",
-                        "messageId": "ID112",
-                        "senderId": "0417303105",
-                        "messageText": messageContent,
-                        "to": clientNumber,
-    })
-
-    headers = {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Username': 'evomedical',
-            'Password': 'Marchon21'
-    }
-
-    response = requests.request("POST", smsurl, headers=headers, data=payload).json()
-    if len(response) == 1:
-        return f"sms send successful to {clientNumber}"
-    
         
-    else:
-        return False
+        response = requests.request("POST", smsurl, headers=headers, data=payload).json()
+        if len(response) == 1:
+            return f"sms send successful to {clientNumber}"
+        
+            
+        else:
+            return False

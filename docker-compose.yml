@@ -23,6 +23,7 @@ services:
       - POSTGRES_DB=ovatu
       - POSTGRES_USER=shakeebanwar
       - POSTGRES_PASSWORD=shakeeb@python@shoaib
+      - POSTGRES_HOST=127.0.0.1
 
 
 

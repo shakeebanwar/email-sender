@@ -883,12 +883,18 @@ class refersmsSend(APIView):
                 return Response({'status':False,'message':"name,number field is required"})
             
             
-            smsStatus = sm.sendsms(name,number,True)
-            if smsStatus:
-                return Response({'status':True,'message':smsStatus})
+            fetchSmsContent = smsTemplate.objects.all().first()
+            if fetchSmsContent:
+                smsStatus = sm.sendsms(name,number,True,fetchSmsContent.content)
+                if smsStatus:
+                    return Response({'status':True,'message':smsStatus})
+
+                else:
+                    return Response({'status':False,'message':'Number is Invalid'})
 
             else:
-                return Response({'status':False,'message':'Number is Invalid'})
+                return Response({'status':False,'message':'Something Went Wrong'})
+
 
 
         except Exception as e:
