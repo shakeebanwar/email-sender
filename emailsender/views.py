@@ -789,7 +789,7 @@ class referalCompaignCron(APIView):
         try:
             # emailList = ["jawadsheikh224@gmail.com","test@evolutionmc.com.au","test1@evolutionmc.com.au","test2@evolutionmc.com.au","test3@evolutionmc.com.au","Shabih_haider1@outlook.com","shakeebanwar250@gmail.com","shoaibbilal101@gmail.com","mf4639@gmail.com"]
 
-             emailList = ["shakeebanwar250@gmail.com"]
+            emailList = ["shakeebanwar250@gmail.com"]
 
             fetchPattern = referalTemplate.objects.all().first()
             if fetchPattern:
